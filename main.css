@@ -1,0 +1,79 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ru {
+	color: red;
+}
+neru {
+	color: blue;
+}
+
+.wrapper {
+	flex: 0 0 auto;
+	padding: 20px;
+}
+
+.Page__header {
+	padding: 0;
+	margin: 0 0 .8em 0;
+	font-size: 1em;
+	font-weight: normal;
+	text-align: center;
+}
+.Page__header neru,
+.Page__header ru {
+	position: relative;
+}
+.Page__header neru:before,
+.Page__header ru:before {
+	content: '';
+	background-image: url(ru.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+	position: absolute;
+	bottom: 100%;
+	width: 100%;
+	height: 85px;
+}
+.Page__header neru:before {
+	background-image: url(neru.png);
+}
+
+.Content__wrapper {
+	font-family: monospace;
+	position: relative;
+	width: 80vw;
+}
+
+.Content {
+	border: none;
+	box-sizing: border-box;
+	font: inherit;
+	resize: none;
+	margin: 0; padding: 0;
+	width: 50%;
+}
+
+.Content--input {
+	outline: 1px solid #ccc;
+}
+
+.Content--result {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 20px;
+	width: 50%;
+	white-space: pre-wrap;
+}
